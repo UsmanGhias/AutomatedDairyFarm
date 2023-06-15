@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<style>
+  #back {
+    background-color: #0d7d99;
+    color: #f7fafa;
+  }
+
+  .form-control{
+    background-color: #0d7d99!important;
+    color: #f6f8f9!important;
+  }
+</style>
+
+<div class="row justify-content-center">
+  <div class="col-10">
+    <div id="back" class="card">
+      <div class="card-body">
+        <h2 class="mb-4">Add Customer</h2>
+        <hr>
+        <form method="POST" novalidate>
+          {% csrf_token %}
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              {{ form.user|as_crispy_field }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.user_type|as_crispy_field }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.contact_number|as_crispy_field }}
+            </div>
+          </div>
+
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              {{ form.joining_data|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-8">
+              {{ form.address|as_crispy_field }}
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-light text-dark">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

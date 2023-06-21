@@ -1,20 +1,5 @@
 from rest_framework import serializers
 from .models import User, Vendor, MilkCategory, Profile, CustomerMilkCategory, CustomerLedger, VendorLedger
-from .models import Farm, Cow
-from .models import Vendor, MilkCategory, User
-
-
-
-class FarmSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Farm
-        fields = ('id', 'name', 'expense_tracking', 'revenue_calculation')
-
-
-class CowSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cow
-        fields = ('id', 'farm', 'name', 'health_data', 'vaccination_record', 'milk_production', 'date')
 
 
 class ContactSerializer(serializers.Serializer):
@@ -77,4 +62,3 @@ class CustomerLedgerSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomerLedger
         fields = ('related_milk_category', 'related_customer', 'date', 'price', 'quantity', 'total')
-

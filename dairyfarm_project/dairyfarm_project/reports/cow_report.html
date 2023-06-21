@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cow Report</title>
+</head>
+<body>
+    <h1>Cow Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Birth Date</th>
+                <!-- Add more fields as per your requirements -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for cow in cows %}
+            <tr>
+                <td>{{ cow.id }}</td>
+                <td>{{ cow.name }}</td>
+                <td>{{ cow.breed }}</td>
+                <td>{{ cow.birth_date }}</td>
+                <!-- Render more fields as per your requirements -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

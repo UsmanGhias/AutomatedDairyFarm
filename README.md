@@ -1,4 +1,4 @@
-# Dairy Management System with Python and Django
+# Dairy Management System with Django Rest Framework and React
 
 The Dairy-Management-System is a software-based application that works as a Dairy Software to maintain daily milk records by registered account members (dairy managers). Customers can log in and view their customer ledger page.
 
@@ -24,10 +24,7 @@ The Dairy-Management-System is a software-based application that works as a Dair
 
 ### Front-End
 
-- HTML
-- CSS
-- Bootstrap
-- JavaScript
+- React
 
 ### Back-End
 
